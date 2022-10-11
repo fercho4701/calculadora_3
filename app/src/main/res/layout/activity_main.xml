@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/numero_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="478dp"
+        android:text="numero_1"
+        app:layout_constraintBottom_toTopOf="@+id/txtV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <EditText
+        android:id="@+id/num1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numero_1" />
+
+    <TextView
+        android:id="@+id/numero_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:text="numero_2"
+        app:layout_constraintBottom_toTopOf="@+id/num2"
+        app:layout_constraintEnd_toEndOf="@+id/num2"
+        app:layout_constraintStart_toStartOf="@+id/num2" />
+
+    <EditText
+        android:id="@+id/num2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/radicacion"
+        app:layout_constraintStart_toStartOf="@+id/num1" />
+
+    <CheckBox
+        android:id="@+id/suma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="45dp"
+        android:text="suma"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num2" />
+
+    <CheckBox
+        android:id="@+id/divicion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:text="divicion"
+        app:layout_constraintBottom_toTopOf="@+id/multiplicacion"
+        app:layout_constraintStart_toStartOf="@+id/multiplicacion" />
+
+    <CheckBox
+        android:id="@+id/radicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="244dp"
+        android:layout_marginEnd="37dp"
+        android:text="radicacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/resta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="21dp"
+        android:text="resta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/suma" />
+
+    <CheckBox
+        android:id="@+id/multiplicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="7dp"
+        android:text="multiplicacion"
+        app:layout_constraintEnd_toStartOf="@+id/cuadrado"
+        app:layout_constraintTop_toBottomOf="@+id/radicacion" />
+
+    <CheckBox
+        android:id="@+id/cuadrado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cuadrado"
+        app:layout_constraintBaseline_toBaselineOf="@+id/multiplicacion"
+        app:layout_constraintStart_toStartOf="@+id/radicacion" />
+
+    <Button
+        android:id="@+id/activar"
+        android:layout_width="114dp"
+        android:layout_height="0dp"
+        android:onClick="onclick"
+        android:text="seleccionar"
+        app:layout_constraintBottom_toBottomOf="@+id/validar"
+        app:layout_constraintEnd_toStartOf="@+id/cuadrado"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/cuadrado"
+        app:layout_constraintTop_toTopOf="@+id/validar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtV"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="30dp"
+        android:text="resultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multiplicacion" />
+
+    <Button
+        android:id="@+id/validar"
+        android:layout_width="104dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="62dp"
+        android:onClick="onclick"
+        android:text="validar"
+        app:layout_constraintBottom_toBottomOf="@+id/desactivar"
+        app:layout_constraintEnd_toEndOf="@+id/divicion"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/resta"
+        app:layout_constraintTop_toTopOf="@+id/resta"
+        app:layout_constraintVertical_bias="0.823" />
+
+    <Button
+        android:id="@+id/desactivar"
+        android:layout_width="193dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="204dp"
+        android:text="quitar_seleccion"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
